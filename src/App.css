@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: red;
 }
 
 .App-logo {
@@ -35,4 +36,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title{
+  background-color: #282c34;
+}
+
+main{
+  padding-left: 500px;
+  padding-top: 10px;
+}
+
+.card{
+  border:1px solid;
+  width: fit-content;
+  height: fit-content;
+  background-color:white;
+  border-radius: 5%;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0,0,0,0.1);
+  
+}
+.card--img{
+  width: 200px;
+  height: 200px;
+  background-color: #090a0a;
+  border-radius: 100%;
+}
+.card--favourite{
+  height: 20px;
 }

@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default function App(){
 
-export default App;
+  const [contact , setContact] = React.useState(
+    {
+      firstName:"Kevin",
+      lastName: "Mugo",
+      phone :"+254796811122",
+      email :" mugokevin900@gmail.com",
+      isFavourite: true
+    })
+
+    function toggleFavourite(){
+       console.log("ToogleFav");
+    }
+  
+
+  return( 
+    <main>
+      <article className="card">
+        <img alt="" src="./user.png" className="card--img"/>
+        <div className="card--info">
+          <img alt="" src={contact.isFavourite ?"./star.png": "./empty.png" }className="card--favourite" onClick={toggleFavourite}/>
+          <h2>{contact.firstName  } {contact.lastName}</h2>
+          <p className="card--contact">{contact.phone}</p>
+          <p className="card--contact">{contact.email}</p>
+        </div>
+
+      </article>
+    </main>
+  );
+};
