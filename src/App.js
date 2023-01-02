@@ -13,7 +13,13 @@ export default function App(){
     })
 
     function toggleFavourite(){
-       console.log("ToogleFav");
+       setContact(prevState => {
+        return{
+          ...prevState ,
+          isFavourite: !prevState.isFavourite
+        }
+       }
+       )
     }
   
 
